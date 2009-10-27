@@ -6,6 +6,13 @@ namespace nothinbutdotnetprep.infrastructure.extensions
 {
     static public class Iteration
     {
+        static public IEnumerable<T> sort_movie<T>(this IEnumerable<T> items, IComparer<T> comparer)
+        {
+            var result = new List<T>(items);
+            result.Sort(comparer);
+            return result;
+        }
+
         static public IEnumerable<T> all_matching<T>(this IEnumerable<T> items,
                                                      Criteria<T> criteria)
         {

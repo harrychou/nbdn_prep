@@ -1,0 +1,121 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="_listOfMovies" priority="1" />
+      <Item value="movie" priority="2" />
+      <Item value="startingYear" priority="0" />
+      <Item value="endingYear" priority="0" />
+      <Item value="Genre" priority="3" />
+      <Item value="MovieMater" priority="0" />
+      <Item value="movies" priority="0" />
+      <Item value="ProductionStudio" priority="6" />
+      <Item value="provide_a_basic_sut_constructor_argument" priority="0" />
+      <Item value="expression" priority="0" />
+      <Item value="accessor" priority="0" />
+      <Item value="item" priority="0" />
+      <Item value="IComparable" priority="0" />
+      <Item value="value_to_be_greater_than" priority="1" />
+      <Item value="Criteria" priority="0" />
+      <Item value="infrastructure" priority="0" />
+      <Item value="sorting" priority="0" />
+      <Item value="list_to_order_by" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:nothinbutdotnetprep.collections.Movie">
+      <Item value="date_published" priority="4" />
+      <Item value="genre" priority="2" />
+      <Item value="production_studio" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@nothinbutdotnetprep.collections.ProductionStudio">
+      <Item value="Pixar" priority="0" />
+      <Item value="Disney" priority="0" />
+      <Item value="Dreamworks" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@nothinbutdotnetprep.collections.Genre">
+      <Item value="kids" priority="1" />
+      <Item value="action" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Add" priority="0" />
+      <Item value="one_at_a_time" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:nothinbutdotnetprep.collections.MovieLibrary">
+      <Item value="all_movies" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="all_matching" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="Year" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.PropertyInfo">
+      <Item value="GetValue" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.Expression`1">
+      <Item value="Body" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.Expression">
+      <Item value="NodeType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.MemberExpression">
+      <Item value="Member" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="Equals" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Array">
+      <Item value="Find" priority="0" />
+      <Item value="Exists" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IComparable`1">
+      <Item value="CompareTo" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Sort" priority="0" />
+      <Item value="IndexOf" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PropertyType">
+      <Item value="CompareTo" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="CompareTo" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:TypeCastingSpecs.cs" caret="0" fromTop="0" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="13220" fromTop="7" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="12" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="16" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="25" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="10" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="18" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="1" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="16" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="23" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="29" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="22" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="24" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="28" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="23" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="18" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="20300" fromTop="239" />
+      <File id="EF77F62B-1CC6-4C03-8198-26DB2D24EE75/f:MovieLibrarySpecs.cs" caret="14284" fromTop="25" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>

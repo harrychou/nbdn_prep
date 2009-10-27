@@ -7,6 +7,7 @@ using developwithpassion.bdddoc.core;
 using nothinbutdotnetprep.collections;
 using nothinbutdotnetprep.infrastructure.extensions;
 using nothinbutdotnetprep.infrastructure.searching;
+using nothinbutdotnetprep.infrastructure.sorting;
 
 /* The following set of Contexts (TestFixture) are in place to specify the functionality that you need to complete for the MovieLibrary class.
  * MovieLibrary is an aggregate root for the Movie class. It exposes the ability to search,sort, and iterate over all of the movies that it aggregates.
@@ -298,7 +299,7 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_sort_all_movies_by_title_descending = () =>
             {
-                var results = sut.sort_all_movies_by_title_descending();
+                var results = sut.all_movies().sort_movie(Order<Movie>.by(movie => movie.title).descend());
 
                 results.should_only_contain_in_order(theres_something_about_mary, the_ring, shrek, pirates_of_the_carribean, indiana_jones_and_the_temple_of_doom,
                                                      cars, a_bugs_life);
@@ -306,34 +307,48 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_sort_all_movies_by_title_ascending = () =>
             {
-                var results = sut.sort_all_movies_by_title_ascending();
+                var results = sut.all_movies().sort_movie(Order<Movie>.by(movie => movie.title).ascend());
 
                 results.should_only_contain_in_order(a_bugs_life, cars, indiana_jones_and_the_temple_of_doom, pirates_of_the_carribean, shrek, the_ring, theres_something_about_mary);
             };
 
             it should_be_able_to_sort_all_movies_by_date_published_descending = () =>
             {
-                var results = sut.sort_all_movies_by_date_published_descending();
+                var results = sut.all_movies().sort_movie(Order<Movie>.by(movie => movie.date_published).descend());
 
                 results.should_only_contain_in_order(theres_something_about_mary, shrek, the_ring, cars, pirates_of_the_carribean, a_bugs_life, indiana_jones_and_the_temple_of_doom);
             };
 
             it should_be_able_to_sort_all_movies_by_date_published_ascending = () =>
             {
-                var results = sut.sort_all_movies_by_date_published_ascending();
+                var results = sut.all_movies().sort_movie(Order<Movie>.by(movie => movie.date_published).ascend());
 
                 results.should_only_contain_in_order(indiana_jones_and_the_temple_of_doom, a_bugs_life, pirates_of_the_carribean, cars, the_ring, shrek, theres_something_about_mary);
             };
 
             it should_be_able_to_sort_all_movies_by_studio_rating_and_year_published = () =>
             {
+                       List<ProductionStudio> list_to_order_by = new List<ProductionStudio>
+                                                      {
+                                                          ProductionStudio.MGM,
+                                                          ProductionStudio.Pixar,
+                                                          ProductionStudio.Dreamworks,
+                                                          ProductionStudio.Universal,
+                                                          ProductionStudio.Disney
+                                                      };
+
+                var results = sut.all_movies().sort_movie(
+                    new ChainedComparer<Movie>(
+                        new StudioComparer(list_to_order_by), 
+                        Order<Movie>.by(movie => movie.date_published).ascend())
+                    );
+
                 //Studio Ratings (highest to lowest)
                 //MGM
                 //Pixar
                 //Dreamworks
                 //Universal
                 //Disney
-                var results = sut.sort_all_movies_by_movie_studio_and_year_published();
                 /* should return a set of results 
                  * in the collection sorted by the rating of the production studio (not the movie rating) and year published. for this exercise you need to take the studio ratings
                  * into effect, which means that you first have to sort by movie studio (taking the ranking into account) and then by the
@@ -430,6 +445,22 @@ namespace nothinbutdotnetprep.tests
                 movieList.Add(the_ring);
                 movieList.Add(theres_something_about_mary);
             }
+        }
+    }
+
+    class StudioComparer : IComparer<Movie> 
+    {
+        readonly List<ProductionStudio> _studios;
+
+        public StudioComparer(List<ProductionStudio> studios)
+        {
+            _studios = studios;
+        }
+
+        public int Compare(Movie x, Movie y)
+        {
+            return _studios.IndexOf(x.production_studio).CompareTo(_studios.IndexOf(y.production_studio));
+
         }
     }
 }

@@ -1,0 +1,7 @@
+C:\repositories\github\nbdn\prep\exercise_to_complete_for_day_1\artifacts\nothinbutdotnetprep.dll
+C:\repositories\github\nbdn\prep\exercise_to_complete_for_day_1\artifacts\nothinbutdotnetprep.pdb
+C:\repositories\github\nbdn\prep\exercise_to_complete_for_day_1\product\nothinbutdotnetprep\obj\Debug\ResolveAssemblyReference.cache
+C:\repositories\github\nbdn\prep\exercise_to_complete_for_day_1\product\nothinbutdotnetprep\obj\Debug\nothinbutdotnetprep.dll
+C:\repositories\github\nbdn\prep\exercise_to_complete_for_day_1\product\nothinbutdotnetprep\obj\Debug\nothinbutdotnetprep.pdb
+C:\repositories\github\nbdn\prep\exercise_to_complete_for_day_1\product\nothinbutdotnetprep\bin\Debug\nothinbutdotnetprep.dll
+C:\repositories\github\nbdn\prep\exercise_to_complete_for_day_1\product\nothinbutdotnetprep\bin\Debug\nothinbutdotnetprep.pdb

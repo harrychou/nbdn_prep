@@ -32,16 +32,6 @@ namespace nothinbutdotnetprep.collections
             return movies.Contains(movie);
         }
 
-        public IEnumerable<Movie> sort_all_movies_by_title_descending()
-        {
-            var orderedMovies = (List<Movie>) movies;
-            orderedMovies.Sort(delegate(Movie leftSide, Movie rightSide)
-            {
-                return rightSide.title.CompareTo(leftSide.title);
-            });
-
-            return orderedMovies;
-        }
 
         public IEnumerable<Movie> sort_all_movies_by_title_ascending()
         {

@@ -2,6 +2,7 @@ using System;
 
 namespace nothinbutdotnetprep.infrastructure.searching
 {
+
     public class PropertyCriteria<ItemToFilter,PropertyType> : Criteria<ItemToFilter>
     {
         Func<ItemToFilter, PropertyType> accessor;
