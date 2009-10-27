@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{286C7067-D921-4B26-8CFA-9F9B795FD4E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>nothinbutdotnetprep</RootNamespace>
+    <AssemblyName>nothinbutdotnetprep</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="collections\Genre.cs" />
+    <Compile Include="collections\IsPublishedAfterACertainYear.cs" />
+    <Compile Include="collections\IsPublishedByAProductionStudio.cs" />
+    <Compile Include="collections\Movie.cs" />
+    <Compile Include="collections\MovieLibrary.cs" />
+    <Compile Include="collections\ProductionStudio.cs" />
+    <Compile Include="collections\ReadonlyList.cs" />
+    <Compile Include="infrastructure\extensions\CollectionExtensions.cs" />
+    <Compile Include="infrastructure\extensions\FuncExtensions.cs" />
+    <Compile Include="infrastructure\extensions\Iteration.cs" />
+    <Compile Include="infrastructure\extensions\StringExtensions.cs" />
+    <Compile Include="infrastructure\extensions\TypeCasting.cs" />
+    <Compile Include="infrastructure\extensions\TypeExtensions.cs" />
+    <Compile Include="infrastructure\searching\AndCriteria.cs" />
+    <Compile Include="infrastructure\searching\AnonymousCriteria.cs" />
+    <Compile Include="infrastructure\searching\ComparableCriteriaFactory.cs" />
+    <Compile Include="infrastructure\searching\DefaultComparableCriteriaFactory.cs" />
+    <Compile Include="infrastructure\searching\Criteria.cs" />
+    <Compile Include="infrastructure\searching\CriteriaExtensions.cs" />
+    <Compile Include="infrastructure\searching\DefaultCriteriaFactory.cs" />
+    <Compile Include="infrastructure\searching\CriteriaFactory.cs" />
+    <Compile Include="infrastructure\searching\EqualTo.cs" />
+    <Compile Include="infrastructure\searching\EqualToAny.cs" />
+    <Compile Include="infrastructure\searching\FallsInRange.cs" />
+    <Compile Include="infrastructure\searching\GreaterThan.cs" />
+    <Compile Include="infrastructure\searching\LessThan.cs" />
+    <Compile Include="infrastructure\searching\NegatingBasicCriteriaFactory.cs" />
+    <Compile Include="infrastructure\searching\NegatingComparableCriteriaFactory.cs" />
+    <Compile Include="infrastructure\searching\NegatingCriteria.cs" />
+    <Compile Include="infrastructure\searching\OrCriteria.cs" />
+    <Compile Include="infrastructure\searching\PropertyCriteria.cs" />
+    <Compile Include="infrastructure\searching\Where.cs" />
+    <Compile Include="infrastructure\sorting\ChainedComparer.cs" />
+    <Compile Include="ranges\InclusiveRange.cs" />
+    <Compile Include="ranges\Range.cs" />
+    <Compile Include="ranges\RangeWithNoUpperBound.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
