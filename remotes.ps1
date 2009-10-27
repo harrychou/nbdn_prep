@@ -1,1 +1,2 @@
-("stgwilli","aaldrich","jbarnes","stanmcfarland","jwisener","sspenser","henkster","johnsteingit","acbush","DamonC","ipduncan") | foreach-object { git remote add $_ "git://github.com/$_/nbdn.git"}
+("taijin","dwoodford","harrychou","henryc430","wmchristie","safphoto","vikasl") | foreach-object {
+  git remote add $_ "git://github.com/$_/nbdn_prep.git" }
