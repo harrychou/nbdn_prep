@@ -299,7 +299,12 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_sort_all_movies_by_title_descending = () =>
             {
-                var results = sut.all_movies().order_by_descending(movie => movie.title));
+                var results = sut.all_movies().order_by_descending(movie => movie.title);
+
+                foreach (var movy in results)
+                {
+                    Console.Write(movy.title);
+                }
 
                 results.should_only_contain_in_order(theres_something_about_mary, the_ring, shrek, pirates_of_the_carribean, indiana_jones_and_the_temple_of_doom,
                                                      cars, a_bugs_life);
@@ -314,26 +319,29 @@ namespace nothinbutdotnetprep.tests
 
             it should_be_able_to_sort_all_movies_by_date_published_descending = () =>
             {
-                var results = sut.all_movies().sort_movie(Order<Movie>.by(movie => movie.date_published).descending());
+               var results = sut.all_movies().order_by_descending(movie => movie.date_published);
 
                 results.should_only_contain_in_order(theres_something_about_mary, shrek, the_ring, cars, pirates_of_the_carribean, a_bugs_life, indiana_jones_and_the_temple_of_doom);
             };
 
             it should_be_able_to_sort_all_movies_by_date_published_ascending = () =>
             {
-                var results = sut.all_movies().sort_movie(Order<Movie>.by(movie => movie.date_published).ascending());
+               var results = sut.all_movies().order_by(movie => movie.date_published);
 
                 results.should_only_contain_in_order(indiana_jones_and_the_temple_of_doom, a_bugs_life, pirates_of_the_carribean, cars, the_ring, shrek, theres_something_about_mary);
             };
 
             it should_be_able_to_sort_all_movies_by_studio_rating_and_year_published = () =>
             {
-                var results = sut.all_movies().order_by(movie => movie.production_studio,
+                var results = sut.all_movies().order_by(
+                    movie => movie.production_studio,
                     ProductionStudio.MGM,ProductionStudio.Pixar,ProductionStudio.Dreamworks,
                     ProductionStudio.Universal,ProductionStudio.Disney,ProductionStudio.Paramount)
-                    .then_by(movie => movie.date_published.Year)
-                    );
+                    .then_by(movie => movie.date_published.Year);
 
+
+                Console.WriteLine("****" + results.Count());
+                
                 //Studio Ratings (highest to lowest)
                 //MGM
                 //Pixar
@@ -439,19 +447,5 @@ namespace nothinbutdotnetprep.tests
         }
     }
 
-    class StudioComparer : IComparer<Movie> 
-    {
-        readonly List<ProductionStudio> _studios;
 
-        public StudioComparer(List<ProductionStudio> studios)
-        {
-            _studios = studios;
-        }
-
-        public int Compare(Movie x, Movie y)
-        {
-            return _studios.IndexOf(x.production_studio).CompareTo(_studios.IndexOf(y.production_studio));
-
-        }
-    }
 }

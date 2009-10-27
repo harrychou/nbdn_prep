@@ -43,11 +43,11 @@
     <AspNetConfiguration>$(Configuration)</AspNetConfiguration>
   </PropertyGroup>
   <PropertyGroup>
-    <SolutionDir>C:\repositories\github\nbdn\prep\exercise_to_complete_for_day_1\</SolutionDir>
+    <SolutionDir>C:\repositories\github\nbdn_prep\</SolutionDir>
     <SolutionExt>.sln</SolutionExt>
     <SolutionFileName>solution.sln</SolutionFileName>
     <SolutionName>solution</SolutionName>
-    <SolutionPath>C:\repositories\github\nbdn\prep\exercise_to_complete_for_day_1\solution.sln</SolutionPath>
+    <SolutionPath>C:\repositories\github\nbdn_prep\solution.sln</SolutionPath>
   </PropertyGroup>
   <PropertyGroup>
     <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and '$(MSBuildToolsVersion)' == '2.0'">v2.0</TargetFrameworkVersion>

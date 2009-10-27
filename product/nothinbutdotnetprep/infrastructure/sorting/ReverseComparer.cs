@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace nothinbutdotnetprep.infrastructure.sorting
@@ -14,7 +13,7 @@ namespace nothinbutdotnetprep.infrastructure.sorting
 
         public int Compare(T x, T y)
         {
-            return -to_reverse.Compare(x, y);
+            return - to_reverse.Compare(x, y);
         }
     }
 }
