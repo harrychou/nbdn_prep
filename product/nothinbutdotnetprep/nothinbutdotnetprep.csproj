@@ -72,9 +72,10 @@
     <Compile Include="infrastructure\searching\Where.cs" />
     <Compile Include="infrastructure\sorting\PropertyComparer.cs" />
     <Compile Include="infrastructure\sorting\ChainedComparer.cs" />
-    <Compile Include="infrastructure\sorting\ComparerFactory.cs" />
+    <Compile Include="infrastructure\sorting\ComparerBuilder.cs" />
     <Compile Include="infrastructure\sorting\Order.cs" />
     <Compile Include="infrastructure\sorting\ReverseComparer.cs" />
+    <Compile Include="infrastructure\sorting\SearchingExtensions.cs" />
     <Compile Include="ranges\InclusiveRange.cs" />
     <Compile Include="ranges\Range.cs" />
     <Compile Include="ranges\RangeWithNoUpperBound.cs" />
